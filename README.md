@@ -40,10 +40,10 @@ source /path/to/catkin_ws/devel/setup.bash
 
 ---
 
-__Installation GAZEBO 9.0:__
+__Installation about GAZEBO 9.0:__
 
 ```
- sudo apt-get install ros-kinetic-gazebo9-ros-pkgs ros-kinetic-gazebo9-ros-control ros-kinetic-gazebo9* (for Gazebo 9)
+ sudo apt-get install ros-kinetic-gazebo9-ros-pkgs ros-kinetic-gazebo9-ros-control ros-kinetic-gazebo9* 
 ```
 
 
