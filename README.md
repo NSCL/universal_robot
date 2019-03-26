@@ -17,11 +17,14 @@ Then clone the repository into the src/ folder. It should look like /path/to/you
 Make sure to source the correct setup file according to your workspace hierarchy, then use ```catkin_make``` to compile.  
 
 __Installation in supported Linux distributions (Ubuntu, up to 16.04 (Xenial), i386 and amd64):
+
 ```sudo apt-get install ros-kinetic-universal-robot
 ```
+
 The following instructions assume that a Catkin workspace has been created at $HOME/catkin_ws and that the source space is at $HOME/catkin_ws/src. Update paths appropriately if they are different on the build machine.
 
 In all other cases the packages will have to be build from sources in a Catkin workspace:
+
 ```
 cd /path/to/catkin_ws/src
 
