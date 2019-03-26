@@ -40,6 +40,15 @@ source /path/to/catkin_ws/devel/setup.bash
 
 ---
 
+__Installation GAZEBO 9.0:__
+
+```
+ sudo apt-get install ros-kinetic-gazebo9-ros-pkgs ros-kinetic-gazebo9-ros-control ros-kinetic-gazebo9* (for Gazebo 9)
+```
+
+
+---
+
 __Usage with Gazebo Simulation__  
 There are launch files available to bringup a simulated robot - either UR5 or UR10.  
 In the following the commands for the UR5 are given. For the UR10, simply replace the prefix accordingly.
