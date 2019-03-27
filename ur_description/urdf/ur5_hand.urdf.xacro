@@ -12,4 +12,14 @@
   <xacro:ur5_robot prefix="" joint_limited="false"/>
 
   <xacro:hand ns="ur5" rpy="0 ${pi/2} 0" connected_to="ee_link"/>
+
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 0.60" rpy="0.0 0.0 0.0" />
+  </joint>
+
 </robot>

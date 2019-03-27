@@ -40,4 +40,4 @@ ur5:
       default: True
       type: FollowJointTrajectory
       joints:
-        []
+        ur5_finger_joint1
