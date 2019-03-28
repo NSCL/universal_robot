@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur5">
+<robot  name="ur5" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- common stuff -->
   <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
 
   <!-- ur5 -->
   <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
   <!-- hand -->
-  <xacro:include filename="$(find franka_description)/robots/hand.xacro"/>
+  <xacro:include filename="$(find ur_description)/urdf/hand.xacro"/>
   
   <!-- arm -->
   <xacro:ur5_robot prefix="" joint_limited="false"/>
@@ -14,12 +14,28 @@
   <xacro:hand ns="ur5" rpy="0 ${pi/2} 0" connected_to="ee_link"/>
 
 
-  <link name="world" />
+  <link name="world" >
+  </link>
 
   <joint name="world_joint" type="fixed">
     <parent link="world" />
     <child link = "base_link" />
     <origin xyz="0.0 0.0 0.60" rpy="0.0 0.0 0.0" />
+  </joint>
+
+
+  <link name="camera_rgb_optical_frame">
+    <visual>
+      <geometry>
+      <mesh filename="package://ur_description/meshes/kinect/meshes/kinect.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="world" />
+    <child link = "camera_rgb_optical_frame" />
+    <origin xyz="0.0 0.0 2.0" rpy="0.0 ${pi/2} 0.0" />
   </joint>
 
 </robot>
